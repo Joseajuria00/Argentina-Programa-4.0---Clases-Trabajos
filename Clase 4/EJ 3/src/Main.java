@@ -32,7 +32,7 @@ public class Main {
     public static String decodificacionx(String texto, String abc, int desplazamiento) {
         for (int i = 0; i < texto.length(); i++) {
             int pos = abc.indexOf(texto.charAt(i)) - desplazamiento;
-            if (pos < 0) {
+            while (pos < 0) {
                 pos += 27;
             }
             StringBuilder auxTexto = new StringBuilder(texto);
